@@ -1,0 +1,5 @@
+#tablebody{
+    display:flex;
+    flex-direction: row;
+    align-content: space-around;
+}
