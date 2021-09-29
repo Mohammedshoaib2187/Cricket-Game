@@ -3,3 +3,40 @@
     flex-direction: row;
     align-content: space-around;
 }
+.tablebody{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body {
+    width: 100%;
+    height: auto;
+    background-image: url('https://ak.picdn.net/shutterstock/videos/25309877/thumb/2.jpg');
+    background-size: 100% 100%;
+    border: 1px solid red;
+  }
+#welcome{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(48, 182, 164)
+}
+#team{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:rgb(210, 223, 28)
+}
+#timerem{
+    color:red;
+    font-family:cursive;
+}
+  hr{
+    height:4px;
+    border-width:0;
+    color:rgb(255, 5, 5);
+    background-color:rgb(255, 17, 17)
+  }
+
+  #winner{
+      color:rgb(70, 50, 255);
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  #man{
+    color:rgb(0, 255, 128);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

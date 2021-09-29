@@ -93,7 +93,7 @@ var Tables = /** @class */ (function () {
                 }
                 row.appendChild(col);
             }
-            tab.style.border = "1px solid";
+            tab.style.border = "4px solid";
             tab.appendChild(row);
         }
         document.getElementById("table" + this.id).appendChild(tab);
@@ -156,9 +156,11 @@ var timeCount = /** @class */ (function () {
         timer.style.margin = "0 auto";
         var h1 = document.createElement("h2");
         h1.style.textAlign = "center";
+        h1.style.color = "red";
         h1.innerHTML = "<b>Time Remaining</b><br>";
         timer.appendChild(h1);
         var h2 = document.createElement("h3");
+        h2.setAttribute("id", "timerem");
         var temp = 0;
         var _loop_1 = function (i) {
             setTimeout(function () {
@@ -215,15 +217,21 @@ var timeCount = /** @class */ (function () {
             var t1 = document.getElementById("totalscore1").innerText;
             var t2 = document.getElementById("totalscore2").innerText;
             var team = 0;
-            if (t1 > t2) {
-                document.getElementById("winner").innerHTML = "<i>Team 1</i>";
-                team = 1;
+            if (t1 == t2) {
+                document.getElementById("winner").innerHTML = "<i>Draw</i>";
+                document.getElementById("man").innerHTML = "None";
             }
             else {
-                document.getElementById("winner").innerHTML = "<i>Team 2</i>";
-                team = 2;
+                if (t1 > t2) {
+                    document.getElementById("winner").innerHTML = "<i>Team 1</i>";
+                    team = 1;
+                }
+                else {
+                    document.getElementById("winner").innerHTML = "<i>Team 2</i>";
+                    team = 2;
+                }
+                _this.manofthematch(team);
             }
-            _this.manofthematch(team);
         };
     };
     timeCount.prototype.manofthematch = function (team) {
