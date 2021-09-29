@@ -127,6 +127,8 @@ class Tables
                 
                 this.col=this.col+1
                 this.temp.push(val)
+                this.sum(this.temp,this.row)
+                this.totalScore()
             }
             else{
                 this.sum(this.temp,this.row)

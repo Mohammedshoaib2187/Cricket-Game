@@ -108,6 +108,8 @@ var Tables = /** @class */ (function () {
             if (_this.col <= 6 && val != 0 && _this.value <= 5) {
                 _this.col = _this.col + 1;
                 _this.temp.push(val);
+                _this.sum(_this.temp, _this.row);
+                _this.totalScore();
             }
             else {
                 _this.sum(_this.temp, _this.row);
